@@ -1,0 +1,14 @@
+# IDEs
+.idea
+.vscode
+
+# PUB-related
+.dart_tool/
+.packages
+build/
+
+# Documentation
+doc
+
+# Lock file
+pubspec.lock
