@@ -1,16 +1,24 @@
 import 'package:luhn_validator/luhn_validator.dart';
-import 'package:test/test.dart';
+import 'package:test/expect.dart';
+import 'package:test/scaffolding.dart';
 
 void main() {
-  group('A group of tests', () {
-    final awesome = Awesome();
+  final validLuhnNumbers = ['49927398716', '1234567812345670'];
+  final invalidLuhnNumbers = ['49927398717', '1234567812345678'];
 
-    setUp(() {
-      // Additional setup goes here.
-    });
+  test('should verify numbers pass Luhn', () {
+    expect(
+      validLuhnNumbers.every((element) => LuhnValidator.validate(element)),
+      true,
+    );
+  });
 
-    test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
-    });
+  test('should verify numbers do not pass Luhn', () {
+    expect(
+      invalidLuhnNumbers
+          .map((element) => LuhnValidator.validate(element))
+          .every((element) => element == false),
+      true,
+    );
   });
 }

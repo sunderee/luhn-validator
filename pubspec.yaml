@@ -1,5 +1,5 @@
 name: luhn_validator
-description: Simple Luhn validator of Swedish SSNs
+description: Simple Luhn validator
 version: 1.0.0
 homepage: https://github.com/sunderee/luhn-validator.dart
 
