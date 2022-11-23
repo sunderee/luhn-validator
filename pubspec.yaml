@@ -1,7 +1,7 @@
 name: luhn_validator
 description: Simple Luhn validator
-version: 1.0.0
-homepage: https://github.com/sunderee/luhn-validator.dart
+version: 1.0.1
+publish_to: "none"
 
 environment:
   sdk: ">=2.18.4 <3.0.0"
